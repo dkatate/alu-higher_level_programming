@@ -1,28 +1,22 @@
 #!/usr/bin/python3
 # script for password validation
-correct_pwd = "david94"
+correct_password = "secret123"
+password = ""
 retry_count = 0
-
-while True:
-    pwd = input("Enter password: ")
-    # counts digits in the password entered
+while password != correct_password:
+    password = input("Enter password: ")
+    retry_count += 1
+    if retry_count > 2:
+        print("alert message: You have entered wrong password more than two times.")
     digit_count = 0
-    for ch in pwd:
-        if ch.isdigit():
+    for c in password:
+        if c.isdigit():
             digit_count += 1
-    # absence of digit results into error
-    if digit_count == 0:
+    if len(password) < 8:
+        print("Error: Too short.")
+    elif digit_count == 0:
         print("Error: Need a digit.")
-        retry_count += 1
-
-    # has digits but wrong password
-    elif pwd != correct_pwd:
-        print("Access denied")
-        retry_count += 1
-
-        # retry alert after entering wrong password for twice
-        if retry_count > 2:
-            print("!!! alert: you have entered wrong password morethan twice")
+    elif password != correct_password:
+        print("Access denied.")
     else:
-        print("Access granted")
-        break
+        print("Access granted.")
