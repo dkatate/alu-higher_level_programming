@@ -10,7 +10,8 @@ def list_division(my_list_1, my_list_2, list_length):
             num2 = my_list_2[i]
 
             # Check if both values are numbers
-            if not isinstance(num1, (int, float)) or not isinstance(num2, (int, float)):
+            if not isinstance(num1, (int, float)) or not isinstance(
+                    num2, (int, float)):
                 print("wrong type")
                 new_list.append(0)
                 continue
