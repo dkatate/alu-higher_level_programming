@@ -1,4 +1,7 @@
-#!/usr/bin/python3
+#!/usr/bin/pythoni3
+"""
+module defining a square class
+"""
 
 
 class Square:
