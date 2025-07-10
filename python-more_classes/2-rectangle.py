@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module defining a Rectangle class with width and height validation."""
 
+
 class Rectangle:
     """Defines a rectangle by its width and height."""
 
