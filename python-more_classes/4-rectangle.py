@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Defines a Rectangle class with width, height, drawing, area, and perimeter."""
 
+
 class Rectangle:
     """Represent a rectangle with validated width and height."""
 
