@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# Prompt for main Python file name (e.g., script.py)
+read -p "Enter the main Python file name (e.g. script.py): " py_file
+
+# Prompt for companion file name (e.g. 0-main.py)
+read -p "Enter the companion test/executable file name (e.g. 0-main.py): " exec_file
+
+# Prompt for contents of main Python file
+echo "Enter the contents for $py_file. Press Ctrl+D when done:"
+py_content=$(</dev/stdin)
+
+# Write contents to main Python file
+echo "$py_content" > "$py_file"
+
+# Prompt for contents of companion Python file
+echo "Enter the contents for $exec_file. Press Ctrl+D when done:"
+exec_content=$(</dev/stdin)
+
+# Write contents to companion Python file
+echo "$exec_content" > "$exec_file"
+
+# Make both Python files executable
+chmod +x "$py_file" "$exec_file"
+
+# Add to git
+git add "$py_file" "$exec_file"
+
+# Use main Python file name (without extension) as commit message
+commit_msg="${py_file%.*}"
+git commit -m "$commit_msg"
+
+# Push to origin master
+git push origin master
