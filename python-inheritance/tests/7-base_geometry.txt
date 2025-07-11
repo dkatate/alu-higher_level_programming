@@ -1,0 +1,13 @@
+This test file checks the behavior of the MyList class and its print_sorted method.
+
+Steps:
+1. Create an instance of MyList.
+2. Append the following integers to the list in this order: 1, 4, 2, 3, 5.
+3. Print the list — should return the original unsorted list.
+4. Call print_sorted() — should print the list sorted in ascending order.
+5. Print the list again — should still show the original unsorted list (i.e., list is unchanged).
+
+Expected output:
+[TypeError] name must be an integer
+[ValueError] age must be greater than 0
+[ValueError] distance must be greater than 0
