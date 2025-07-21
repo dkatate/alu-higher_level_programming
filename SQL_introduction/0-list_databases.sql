@@ -1,2 +1,2 @@
-# this show databases available
+-- this show databases available
 SHOW DATABASES;
