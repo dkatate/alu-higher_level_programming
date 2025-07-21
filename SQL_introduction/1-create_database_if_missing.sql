@@ -1,2 +1,2 @@
 -- creates databases
-CREATE DATABASE hbtn_0c_0
+REATE DATABASE hbtn_0c_0
